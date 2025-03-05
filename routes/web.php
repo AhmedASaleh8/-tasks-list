@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,4 +30,19 @@ Route::post('/about', function () {
      ]; 
 
     return view('about', compact('name'));
+});
+
+Route::get('tasks', action: [TaskController::class , 'index']);
+
+// هذه Route  وظيفتها أن تقوم بإضافة البيانات الي Databeas
+Route::post('create',action: [TaskController::class , 'create']);  
+
+Route::post('delet/{id}', action: [TaskController::class, 'destroy']);  
+
+Route::post('edit/{id}', action: [TaskController::class, 'edit']);
+
+Route::post('update/{id}', action: [TaskController::class, 'update']);  
+ 
+Route::get('app', function () {
+    return view('layouts.app');
 });
