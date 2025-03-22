@@ -39,23 +39,23 @@ Route::get('app', function () {
 
 Route::get('tasks', action: [TaskController::class , 'index']);
 
-// Route::post('create',action: [TaskController::class , 'create']);  
+Route::post('create',action: [TaskController::class , 'create']);  
 
-// Route::post('delet/{id}', action: [TaskController::class, 'destroy']);  
+Route::post('delet/{id}', action: [TaskController::class, 'destroy']);  
 
-// Route::post('edit/{id}', action: [TaskController::class, 'edit']);
+Route::post('edit/{id}', action: [TaskController::class, 'edit']);
 
-// Route::post('update/{id}', action: [TaskController::class, 'update']);  
+Route::post('update/{id}', action: [TaskController::class, 'update']);  
 
-//------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 // User Routes
 
-Route::get('users', [UserController:: class, 'index']);
+// Route::get('users', [UserController:: class, 'index']);
 
-Route::post('create',  [UserController:: class, 'create']);
+// Route::post('create',  [UserController:: class, 'create']);
 
-Route::post('delete/{id}', [UserController:: class, 'destroy']);
+// Route::post('delete/{id}', [UserController:: class, 'destroy']);
 
-Route::post('edit/{id}',[UserController:: class, 'edit']);
+// Route::post('edit/{id}',[UserController:: class, 'edit']);
 
-Route::post('update', [UserController:: class, 'update'] );
+// Route::post('update', [UserController:: class, 'update'] );
